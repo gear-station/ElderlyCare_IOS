@@ -1,0 +1,6 @@
+framework module Pods_ElderlyCare_IOSTests {
+  umbrella header "Pods-ElderlyCare_IOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
