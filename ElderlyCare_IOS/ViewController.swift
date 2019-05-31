@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import ElderCare_UserMediator
+import CTMediator
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
 
 
+    @IBAction func pushToUser(_ sender: Any) {
+        print(CTMediator.sharedInstance()?.userViewController(callback: { (s) in
+            
+        }))
+        guard let userVC = CTMediator.sharedInstance()?.userViewController(callback: { (callback) in
+            print(callback)
+        }) else {return}
+        navigationController?.pushViewController(userVC, animated: true)
+    }
 }
 
